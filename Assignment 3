@@ -1,0 +1,11 @@
+35. 1, 2.4, 7.2, 5.3
+37. if not (Value1 < Value2) || odd(Number)
+      statement1
+    else
+      statement2
+    end if
+38. Yes as long as A, B and C are all set to true beforehand and it is known to others that believe they were set to false.
+61. Both Percival and Llewellyn are truthtellers because if Percival was a lair it shows that none of them are liars  
+62. Both Merlin and Meredith are truthtellers because if Merlin is a liar what he said would still turn to them being truthtellers.
+63.Both Rothwold and Grymlin are truthtellers because even if Rothwold is a liar he admitted to being one and he said either I am a liar or Grymlin is a truthteller.
+64. Both Gwendolyn and Merrilaine are liars because if Gwendolyn is telling the truth he is saying he is a liar and that would make Merrilaine a truthteller but since Gwendolyn is a liar that would also make Merrilaine a liar.
