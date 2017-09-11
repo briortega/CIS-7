@@ -1,1 +1,7 @@
 
+Show that p->q and q' -> p' are logically equivalent without using truth tables or a "contrapositive" law (don't assume they are true)
+(p -> q) ⇔ (q` -> p`)
+(p` v q) ⇔ (q`` v p`) implication x2
+(p` v q) ⇔ (q v p`) Double Negation
+(q v p`) ⇔ (q v p`) Commutative
+(q v p`) ⇔ (q v p`)
