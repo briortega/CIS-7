@@ -5,3 +5,22 @@ Show that p->q and q' -> p' are logically equivalent without using truth tables 
 (p` v q) ⇔ (q v p`) Double Negation
 (q v p`) ⇔ (q v p`) Commutative
 (q v p`) ⇔ (q v p`)
+
+Show that (p->r) ^ (q->r) <=> (p v q) -> r
+(p -> r) ^ (q -> r) <=> (p v q) -> r
+(p` v r) ^ (q` v r) ⇔ (p v q)’ v r Implication x3
+(p` v r) ^ (q` v r) ⇔ (p` v r ) ^ (q` v r) distribute
+
+Come up with 2 more questions like the ones above. Incorporate the logic laws we discussed in class.
+Your questions will be used in the next class' lab
+
+(p v q)` ⇔ p
+(p` ^ q`) ⇔ p	De Morgan’s
+(p ^ q) ^ p ⇔  p Double Negation
+(p ^ (p ^ q)) ⇔ p Commutative
+p ⇔ p Absorption
+
+((p ^ (p v q)) v q ) ⇔ (p`)
+(p v q) ⇔ p`	Absorption
+p ⇔ p` Identity
+p` ⇔ p` De Morgan’s
