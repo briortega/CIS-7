@@ -1,6 +1,6 @@
 Practice Question 18:
 A. x[S(x) -> I(x)]
-B. x [S(x) ^ I(x) ^ M(x)]
+B. x[S(x) ^ I(x) ^ M(x)]
 C. x[M(x) -> (S(x) ^ (I(x))’)]
 D. x[M(x) -> (S(x) ^ I(x))]
 
