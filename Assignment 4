@@ -21,6 +21,8 @@ Your questions will be used in the next class' lab
 (p ^ (p ^ q)) ⇔ p Commutative
 p ⇔ p Absorption
 
+() ⇔ 
+
 ((p ^ (p v q)) v q ) ⇔ (p`)
 (p v q) ⇔ p` Absorption
 p ⇔ p` Identity
