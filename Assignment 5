@@ -14,18 +14,16 @@ E. Some pretty woman love only handsome men.
 F. John loves all pretty women.
 
 34.
-A(x): x is 
-B(x): x is 
-P(x,y): x is 
-Q(x): x is
+A(x): x is tall person
+B(x): x is short person
+P(x,y): x is better than y
+Q(x): x is average person
 
 (Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)[A(x) ^ B(x)]
-(∀x)(Ǝx)P(x,y) ->(Ǝx)(∀x)P(x,y)
+A. If some people are tall and short 
+(∀x)(Ǝy)P(x,y) ->(Ǝx)(∀y)P(x,y)
+B. If all tall people are better than some short people then some tall people are better than all short people.
 (∀x)[P(x) -> Q(x)] -> [(Ǝx)P(x) -> (∀x)Q(x)]
-(∀x)[A(x)]` <=> [(∀x)A(x)]`
-
-
-A.
-B.
 C.
-D.
+(∀x)[A(x)]` <=> [(∀x)A(x)]`
+D. All non tall people are not all tall people.
