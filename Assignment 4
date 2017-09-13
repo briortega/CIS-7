@@ -14,9 +14,10 @@ Show that (p->r) ^ (q->r) <=> (p v q) -> r
 Come up with 2 more questions like the ones above. Incorporate the logic laws we discussed in class.
 Your questions will be used in the next class' lab
 
-(p v q)` ⇔ p
-(p` ^ q`) ⇔ p	De Morgan’s
-(p ^ q) ^ p ⇔  p Double Negation
+(p v q)` ^ p ⇔ p
+(p` ^ q`) ^ p ⇔ p	De Morgan’s
+(p` ^ q`)` ^ p ⇔ p Double Negation
+(p ^ q) ^ p ⇔ p Double Negation
 (p ^ (p ^ q)) ⇔ p Commutative
 p ⇔ p Absorption
 
