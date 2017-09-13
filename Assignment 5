@@ -19,6 +19,12 @@ B(x): x is
 P(x,y): x is 
 Q(x): x is
 
+(Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)[A(x) ^ B(x)]
+(∀x)(Ǝx)P(x,y) ->(Ǝx)(∀x)P(x,y)
+(∀x)[P(x) -> Q(x)] -> [(Ǝx)P(x) -> (∀x)Q(x)]
+(∀x)[A(x)]` <=> [(∀x)A(x)]`
+
+
 A.
 B.
 C.
