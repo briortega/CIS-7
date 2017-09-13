@@ -22,6 +22,6 @@ Your questions will be used in the next class' lab
 p ⇔ p Absorption
 
 ((p ^ (p v q)) v q ) ⇔ (p`)
-(p v q) ⇔ p`	Absorption
+(p v q) ⇔ p` Absorption
 p ⇔ p` Identity
 p` ⇔ p` De Morgan’s
