@@ -14,6 +14,7 @@ E. Some pretty woman love only handsome men.
 F. John loves all pretty women.
 
 34.
+Domain: people
 A(x): x is tall person
 B(x): x is short person
 P(x,y): x is better than y
@@ -21,6 +22,7 @@ Q(x): x is average person
 
 (Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)[A(x) ^ B(x)]
 A. If some people are tall and some are short then some people are tall and short.
+  Can't be true must be one or the other.
 
 (∀x)(Ǝy)P(x,y) ->(Ǝx)(∀y)P(x,y)
 B. If all tall people are better than some short people then some tall people are better than all short people.
