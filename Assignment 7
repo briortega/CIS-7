@@ -3,15 +3,13 @@ Indicate which method of proof you used.
 
 Prove: The sum of two odd integers is even.
 Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1
-(2 * 7) + 1 = 15
-2 * 7 = 14
-7 + 7 = 14
+n + n = even
+
 Prove: The sum of an even integer and it's square is even 
-2 + 2 = 4
-4^2 = 4
-4 * 4 = 16
+
 Prove by Contradiction: If n squared is odd, then n is odd
-n^2 is odd, n is odd
-n = n * n
-2^2 = 4
-2 * 2 = 4
+n^2 is odd
+n is odd
+(2j + 1)(2j + 1)
+4j^2 + 2j + 1
+2(2j^2 + 2j) + 1
