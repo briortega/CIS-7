@@ -1,1 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int answer = 0;
+	char choice;
+	do
+	{
+		cout << "Enter a number: ";
+		cin >> answer;
 
+		if (answer % 2 == 0) {
+			cout << "Your number is even." << endl;
+		}
+		else {
+			cout << "Your number is odd" << endl;
+		}
+
+		cout << "Do you want to enter another value Yes (Y) or quit (Q): ";
+		cin >> choice;
+		
+		system("cls");
+	
+	} while (choice != 'q');
+}
