@@ -3,7 +3,9 @@ Indicate which method of proof you used.
 
 Prove: The sum of two odd integers is even.
 Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1
-n + n = even
+2n is even2n + 1 is odd
+(2n + 1) + (2n + 1) is even
+4n + 2 is even
 
 Prove: The sum of an even integer and it's square is even 
 
