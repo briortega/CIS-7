@@ -2,6 +2,7 @@ Prove: If n = 25, 100, or 169, then n is a perfect square and is the sum of two 
 Indicate which method of proof you used.
 
 
+
 Prove: The sum of two odd integers is even.
 Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1
 2n is even
@@ -9,6 +10,9 @@ Hint: By definition, even integers can be expressed as 2n, thus odd integers can
 
 (2n + 1) + (2n + 1) is even
 4n + 2 is even
+2(n+ 1) 2 times odd is even
+m = n+1
+2m
 
 Prove: The sum of an even integer and it's square is even 
 2n += is even
