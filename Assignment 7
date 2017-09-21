@@ -1,11 +1,18 @@
 Prove: If n = 25, 100, or 169, then n is a perfect square and is the sum of two perfect squares.
 Indicate which method of proof you used.
+Proof by exhaustive
 
-n = 25
+n = 25 a = 3 b = 4
+n = a^2 + b^2
+25 = 9 + 16
 
-n = 100
+n = 100 a = 6 b= 8
+n = a^2 + b^2
+20 = 36 + 64
 
-n = 169
+n = 169 a = 5 b = 12
+n = a^2 + b^2
+169 = 25 + 144
 
 Prove: The sum of two odd integers is even.
 Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1
@@ -30,11 +37,6 @@ Prove: The sum of an even integer and it's square is even
 
 
 Prove by Contradiction: If n squared is odd, then n is odd
-n^2 is odd
-n is odd
-(2j + 1)(2j + 1)
-4j^2 + 2j + 1
-2(2j^2 + 2j) + 1
 
 n^2 is oddn is odd
 n^2 is odd -> n is odd
