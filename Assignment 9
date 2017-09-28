@@ -31,3 +31,17 @@ m + n^2 + n + 1 = m
 - [ ] Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers
   Hint: 4^(3+1) = 4 * 4^3
   Hint: If 9^n - 1 = 8m, then 9^n = 8m + 1
+  
+9^n - 1 = 8m
+9^(n + 1) - 1 = 8m
+9^(1 + 1) -1 = 8m
+9^1 -1 = 8m
+9 - 1 = 8m
+8 = 8m
+
+9^(n+1) - 1 = 8m
+(9^n * 9^1 - 1) = 8m
+8m * 9 - 1 = 8m
+8m * 8 = 8m
+8(m * 1) = 8m
+(m * 1) = m
