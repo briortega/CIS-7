@@ -1,1 +1,42 @@
+//Write a program to print the prime factorization of a given input number
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "Enter a non prime number: ";
+    cin >> num;
+    for (int i = 2; i < num; i++)
+    {
+        while(num % i == 0)
+        {
+            num = num / i;
+            cout << i << " ";
+        }
+    }
+}
 
+//I tried making it ask for another number if a prime number was entered
+//Sometimes it works sometimes it doesn't
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "Enter a non prime number: ";
+    cin >> num;
+    for (int i = 2; i < num; i++)
+    {
+        do
+        {
+            cout << "Enter another non prime number: ";
+            cin >> num;
+        }while ((num % i) != 0);
+        while(num % i == 0)
+        {
+            num = num / i;
+            cout << i << " ";
+        }       
+    }
+}
