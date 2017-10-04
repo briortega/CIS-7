@@ -1,2 +1,38 @@
-/Write a program that asks the user for 2 positive integers, validates the input, and then prints out the GCD of those integers.
+//Write a program that asks the user for 2 positive integers, validates the input, and then prints out the GCD of those integers.
+#include <iostream>
+using namespace std;
+int GCD(int num1, int num2);
+int main()
+{
+    int num1;
+    int num2;
+    int gcd;
+    
+    cout << "Enter two positive numbers: ";
+    cin >> num1;
+    cin >> num2;
+
+    do
+    { 
+        if (num1 < 0)
+        {
+            cout << "Enter a positive numbers: ";
+            cin >> num1;
+        }
+        else if (num2 < 0)
+        {
+            cout << "Enter a positive numbers: ";
+            cin >> num2;
+        }
+    }while ((num1 < 0) || (num2 < 0));
+    gcd = GCD(num1,num2);
+    
+    cout << "The GCD of " << num1 << " and " << num2 << " is: " << gcd;
+}
+int GCD(int num1, int num2)
+{
+    int gcd = 0;
+    if (num2 == 0)
+    return num1;
+    return GCD(num2,num1%num2);
 }
