@@ -1,3 +1,63 @@
+//Brute Force
+//Write a program that asks the user for 2 positive integers, validates the input, and then prints out the GCD of those integers.
+#include <iostream>
+#include <algorithm>
+#include <ctime>
+using namespace std;
+int GCD(int num1, int num2);
+int main()
+{
+	int num1;
+	int num2;
+	int gcd;
+	clock_t start1;
+	clock_t end1;
+	float timeDuration1;
+	
+	start1 = clock();
+	cout << "Enter two positive numbers: ";
+	cin >> num1;
+	cin >> num2;
+ 
+	do
+	{ 
+    	if (num1 < 0)
+    	{
+        	cout << "Enter a positive numbers: ";
+        	cin >> num1;
+    	}
+    	else if (num2 < 0)
+    	{
+        	cout << "Enter a positive numbers: ";
+        	cin >> num2;
+    	}
+	}while ((num1 < 0) || (num2 < 0));
+	
+	gcd = GCD(num1,num2);
+	
+	cout << "The GCD of " << num1 << " and " << num2 << " is: " << gcd << endl;
+	end1 = clock();
+	timeDuration1 = (end1 - start1 / (float) CLOCKS_PER_SEC);
+	cout << "Time 1: " << timeDuration1;
+}
+int GCD(int num1, int num2)
+{
+	int gcd = 0;
+   	if (num2 == 0)
+	    return num1;
+	else if (num1 == 0)
+	    return num2;
+	 
+	for (int i = 1; i <= num1 && i <= num2; i++)
+	{
+    	if (num1 % i == 0 && num2 % i == 0)
+    	{
+            	gcd = i;
+    	}
+	}
+	return gcd;
+}
+//Euclidian Method
 //Write a program that asks the user for 2 positive integers, validates the input, and then prints out the GCD of those integers.
 #include <iostream>
 #include <ctime>
