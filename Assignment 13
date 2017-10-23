@@ -1,1 +1,79 @@
-
+#include <iostream>
+#include <vector>
+#include <string>
+#include <stdlib.h>
+using namespace std;
+struct Tower
+{
+    string name;
+    vector <int> disks;
+    void printDisks()
+    {
+      cout << name << " Tower: ";
+      for (int i = 0; i < disks.size(); i++)
+      {
+        cout << disks[i] << " ";
+      }
+      cout << endl;
+}
+};
+void move(int disks, Tower& tower1,Tower& tower2, Tower& tower3);
+void printTowers(int disks, Tower& tower1,Tower& tower2, Tower& tower3);
+int main()
+{
+    Tower tower1;
+    Tower tower2;
+    Tower tower3;
+    tower1.name = "Start";
+    tower2.name = "End";
+    tower3.name = "Spare";
+    int disks;
+    cout << "Enter number of disks to be used: ";
+    cin >> disks;
+    for (int i = 0; i < disks; i++)
+    {
+      tower1.disks.push_back(i+1);
+    }
+   	move(disks, tower1, tower2, tower3);
+}
+void move(int disks, Tower& tower1,Tower& tower2, Tower& tower3)
+{
+    int mDisk;
+  	if (disks == 0)
+  	{
+    	disks = disks;
+    	printTowers(disks, tower1, tower2, tower3);
+  	}
+  	else if(disks == 1)
+  	{
+      	cout << "Move disk " << disks << " from " << tower1.name << " to " << tower2.name << endl;
+      	if (!tower1.disks.empty())
+      	{
+      	  mDisk = tower1.disks.back();
+      	  tower1.disks.pop_back();
+      	  tower2.disks.push_back(mDisk);
+      	}
+  	    printTowers(disks, tower1, tower2, tower3);
+  	}
+  	else
+  	{
+  	  move(disks-1, tower1, tower3, tower2);
+      cout << "Move disk " << disks << " from " << tower1.name << " to " << tower2.name << endl;
+      if (!tower1.disks.empty())
+      {
+        mDisk = tower1.disks.back();
+        tower1.disks.pop_back();
+        tower2.disks.push_back(mDisk);
+      }
+      move(disks-1, tower3, tower2, tower1);
+      printTowers(disks, tower1, tower2, tower3);
+  	}
+}
+void printTowers(int disks, Tower& tower1,Tower& tower2, Tower& tower3)
+{
+    tower1.printDisks();
+    tower2.printDisks();
+    tower3.printDisks();
+    cin.get();
+    //system("clear");
+}
