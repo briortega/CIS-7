@@ -51,7 +51,7 @@ int factorial (int num, vector<int>& numberStack)
 	}
 	else
 	{
-	  x = num * factorial (num - 1,numberStack);
+	  x = num * factorial (num - 1, numberStack);
     numberStack.pop_back();
 	}
 	for (int i = 0; i < numberStack.size(); i++)
@@ -67,10 +67,10 @@ int fibonacci(int num)
 	{
 	  return 0;
 	}
-	else if (num == 1 || num ==2)
+	else if (num == 1 || num == 2)
 	{
     	return 1;
 	}
-	int x = (fibonacci(num-1) + fibonacci(num -2));
+	int x = (fibonacci(num - 1) + fibonacci(num - 2));
 	return x;
 }
