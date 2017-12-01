@@ -1,1 +1,179 @@
-
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <tuple>
+using namespace std;
+void addToSetA(vector<string>& setA);
+void addToSetB(vector<string>& setB);
+void AIntersetB(vector<string>& setA, vector<string>& setB);
+void AUnionB(vector<string>& setA, vector<string>& setB);
+void ADiffersB(vector<string>& setA, vector<string>& setB);
+void BDiffersA(vector<string>& setA, vector<string>& setB);
+void ACrossB(vector<string>& setA, vector<string>& setB);
+void powerSetA(vector<string>& setA, vector<string>& setB);
+void powerSetB(vector<string>& setA, vector<string>& setB);
+int main()
+{
+	vector<string> setA;
+	vector<string> setB;
+	int choice;
+	char answer;
+	do
+	{
+  	cout << "Set A: {";
+  for(int i = 0; i < setA.size(); i++)
+  {
+	cout << setA[i] << ",";
+  }
+  cout << "}";
+  cout << "\nSet B: {";
+  for(int i = 0; i < setB.size(); i++)
+  {
+	cout << setB[i] << ",";
+  }
+  cout << "}" << endl;
+	cout << "\nOptions: " << endl;
+	cout << "1.Add item to set A\n2.Add item to set B\n3.A interset B\n4.A union B\n5.A differs B\n6.B differs A\n7.A cross B\n8.Power set of A\n9.Power set of B\n0.Quit\n";
+	cout << "Enter an option: ";
+	cin >> choice;
+	cout << endl;
+	if (choice == 1)
+	{
+  	addToSetA(setA);
+  	cout << endl;
+	}
+	else if (choice == 2)
+	{
+  	addToSetB(setB);
+  	cout << endl;
+	}
+	else if (choice == 3)
+	{
+  	AIntersetB(setA,setB);
+  	cout << endl;
+	}
+	else if (choice == 4)
+	{
+  	AUnionB(setA,setB);
+  	cout << endl;
+	}
+	else if (choice == 5)
+	{
+  	ADiffersB(setA,setB);
+  	cout << endl;
+	}
+	else if (choice == 6)
+	{
+  	BDiffersA(setA,setB);
+  	cout << endl;
+	}
+	else if (choice == 7)
+	{
+  	ACrossB(setA, setB);
+  	cout << endl;
+	}
+	else if (choice == 8)
+	{
+  	powerSetA(setA, setB);
+  	cout << endl;
+	}
+	else if (choice == 9)
+  {
+  	powerSetB(setA, setB);
+  	cout << endl;
+	}
+	}while(choice != 0);
+}
+void addToSetA(vector<string>& setA)
+{
+	string aValue;
+	cout << "\nAdd which value to add to set A: ";
+	cin >> aValue;
+	setA.push_back(aValue);
+}
+void addToSetB(vector<string>& setB)
+{
+	string bValue;
+	cout << "\nAdd which value to add to set B: ";
+	cin >> bValue;
+	setB.push_back(bValue);
+}
+void AIntersetB(vector<string>& setA, vector<string>& setB)
+{
+  sort(setA.begin(),setA.end());
+  sort(setB.begin(),setB.end());
+  vector<string> intersection;
+  set_intersection(setA.begin(),setA.end(), setB.begin(),setB.end(),back_inserter(intersection));
+  cout << "Intersection: {";
+  for (string n : intersection)
+  {
+	cout << n << ",";
+  }
+  cout << "}" << endl;
+}
+void AUnionB(vector<string>& setA, vector<string>& setB)
+{
+  sort(setA.begin(),setA.end());
+  sort(setB.begin(),setB.end());
+  vector<string> unionSet;
+  set_union(setA.begin(),setA.end(), setB.begin(),setB.end(),back_inserter(unionSet));
+  cout << "Union: {";
+  for (string n : unionSet)
+  {
+	cout << n << ",";
+  }
+  cout << "}" << endl;
+}
+void ADiffersB(vector<string>& setA, vector<string>& setB)
+{
+  sort(setA.begin(),setA.end());
+  sort(setB.begin(),setB.end());
+  vector<string> differenceSet;
+  set_difference(setA.begin(),setA.end(), setB.begin(),setB.end(),back_inserter(differenceSet));
+  cout << "A Differs B: {";
+  for (string n : differenceSet)
+  {
+	cout << n << ",";
+  }
+  cout << "}" << endl;
+}
+void BDiffersA(vector<string>& setA, vector<string>& setB)
+{
+  sort(setA.begin(),setA.end());
+  sort(setB.begin(),setB.end());
+  vector<string> differenceSet;
+  set_difference(setB.begin(),setB.end(),setA.begin(),setA.end(),back_inserter(differenceSet));
+  cout << "B Differs A: {";
+  for (string n : differenceSet)
+  {
+	cout << n << ",";
+  }
+  cout << "}" << endl;
+}
+void ACrossB(vector<string>& setA,vector<string>& setB)
+{
+  sort(setA.begin(),setA.end());
+  sort(setB.begin(),setB.end());
+  cout << "A Cross B: {";
+    
+    for (auto elementsetA: setA) 
+    {
+        for (auto elementsetB: setB) 
+        {
+            cout << "(" << elementsetA << ",";
+            cout << "" << elementsetB << ")";
+        }
+    }
+    cout << endl;
+}
+void powerSetA(vector<string>& setA, vector<string>& setB)
+{
+ 
+  cout << endl;
+}
+void powerSetB(vector<string>& setA, vector<string>& setB)
+{
+  cout << endl;
+}
