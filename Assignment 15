@@ -3,7 +3,6 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
-#include <tuple>
 using namespace std;
 void addToSetA(vector<string>& setA);
 void addToSetB(vector<string>& setB);
