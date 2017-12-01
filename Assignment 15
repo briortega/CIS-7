@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iterator>
 using namespace std;
+
 void addToSetA(vector<string>& setA);
 void addToSetB(vector<string>& setB);
 void AIntersetB(vector<string>& setA, vector<string>& setB);
@@ -13,6 +14,7 @@ void BDiffersA(vector<string>& setA, vector<string>& setB);
 void ACrossB(vector<string>& setA, vector<string>& setB);
 void powerSetA(vector<string>& setA, vector<string>& setB);
 void powerSetB(vector<string>& setA, vector<string>& setB);
+
 int main()
 {
 	vector<string> setA;
