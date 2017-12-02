@@ -126,7 +126,7 @@ string findNode(string name, Node n)
   if (name == n.name)
   {
 	return node;
-	return "Cant's be added one already exsits";
+	return "Can't be added one already exists";
   }
   findNode(n.left);
   findNode(n.right);
