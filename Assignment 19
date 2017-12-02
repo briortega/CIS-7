@@ -1,0 +1,133 @@
+#include<iostream>
+#include<string>
+#include <algorithm>
+using namespace std;
+void addLeftChild(Node n);
+void addRightChild(Node n);
+void numOfNodes();
+void depthofTree();
+void isFull();
+void isComplete();
+void preorder();
+void inorder();
+void postorder();
+string findNode(string name, Node n);
+class Node
+{
+  string name;
+  Node leftNode;
+  Node rightNode;
+};
+int main()
+{
+  int choice;
+  Node leftChild;
+  Node rightChild;
+  do
+  {
+	cout << "\nNumber of Nodes: " << numOfNodes() << endl;
+	cout << "Depth of Tree: " << depthofTree() << endl;
+	cout << "Tree full? " << isFull() << endl;
+	cout << "Tree complete? " << isComplete() << endl;
+	cout << "Choices:\n1)Add left child\n2)Add right child\n3)Quit\n";
+	cout << "Enter choice: ";
+	cin >> choice;
+	if(choice == 1)
+	{
+  	addLeftChild();
+	}
+	else if(choice == 2)
+	{
+  	addRightChild();
+	}
+  }while (choice != 3);
+}
+void addLeftChild(Node n)
+{
+  string answer;
+  cout << "Add left child to which node? " << endl;
+  cin >> answer;
+  if (answer == n)
+  {
+	cout << "Can't be added one child is already there" << endl;
+	addLeftChild(Node n);
+  }
+  else if (answer !=)
+  {
+	answer = new Node n;
+  }
+}
+void addRightChild(Node n)
+{
+  string answer;
+  cout << "Add right child to which node? " << endl;
+  cin >> answer;
+ 
+  if (answer == n)
+  {
+	cout << "Can't be added one child is already there" << endl;
+	addLeftChild(Node n);
+  }
+  else if (answer !=)
+  {
+	answer = new Node n;
+  }
+}
+void numOfNodes()
+{
+  cout << numOfNodes;
+}
+void depthofTree()
+{
+  cout << depth;
+}
+void isFull()
+{
+  if ()
+  {
+	cout << "It's a full tree" << endl;
+  }
+  else
+  {
+	cout << "Not a full tree" << endl;
+  }
+}
+void isComplete()
+{
+  if()
+  {
+	cout << "It's a completed tree" << endl;
+  }
+  else
+  {
+	cout << "Not a completed tree" << endl
+  }
+}
+void preorder(Node n)
+{
+  write(n.name);
+  preorder(n.left);
+  prorder(n.right);
+}
+void inorder(Node n)
+{
+  inorder(n.left);
+  write(n.name);
+  inorder(n.right);
+}
+void postorder(Node n)
+{
+  postorder(n.left);
+  postorder(n.right);
+  write(n.name);
+}
+string findNode(string name, Node n)
+{
+  if (name == n.name)
+  {
+	return node;
+	return "Cant's be added one already exsits";
+  }
+  findNode(n.left);
+  findNode(n.right);
+}
