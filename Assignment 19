@@ -2,6 +2,7 @@
 #include<string>
 #include <algorithm>
 using namespace std;
+
 void addLeftChild(Node n);
 void addRightChild(Node n);
 void numOfNodes();
@@ -12,12 +13,14 @@ void preorder();
 void inorder();
 void postorder();
 string findNode(string name, Node n);
+
 class Node
 {
   string name;
   Node leftNode;
   Node rightNode;
 };
+
 int main()
 {
   int choice;
