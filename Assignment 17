@@ -1,1 +1,149 @@
+#include <iostream>
+#include <vector>
+using namespace std;
 
+void addVertices(vector<vector<int>> &vertices, int &nodes);
+void addEdges(vector<vector<int>> &vertices, int &nodes);
+void highestDegree(vector<vector<int>> &vertices, int &nodes);
+void findIsolated(vector<vector<int>> &vertices, int &nodes);
+void findLoop();
+void isConnected();
+void isCompleted();
+void displayInfo(vector<vector<int>> &vertices, int &nodes);
+int main()
+{
+  int choice;
+  vector<vector<int>> vertices;
+  vector<int> edges;
+  int nodes = 0;
+  do
+  {
+    displayInfo(vertices,nodes);
+    cout << "\n1)Add vertices\n2)Add edges\n3)Quit\nEnter a choice";
+	  cin >> choice;
+	  if (choice == 1)
+	  {
+  	  addVertices(vertices,nodes);
+	  }
+	  else if (choice == 2)
+	  {
+  	  int v1, v2;
+  	  addEdges(vertices,nodes);
+	  }
+  }while(choice != 3);
+ // return 0;
+}
+void addVertices(vector<vector<int>> &vertices, int &nodes)
+{
+ // nodes = nodes + 1;
+  //vertices.resize(nodes);
+  for (int i = 0; i < nodes; i++)
+  {
+    vertices[i].resize(nodes + 1);
+  }
+  cout << "Vertex has been added" << nodes << endl;
+}
+void addEdges(vector<vector<int>> &vertices, int &nodes)
+{
+  int vertex1 = 0;
+  int vertex2 = 0;
+  cout << "Enter the two vertices to create an edge" << endl;
+  cout << "Vertices 1: ";
+  cin >> vertex1;
+  cout << "Vertices 2: ";
+  cin >> vertex2;
+ /* if (vertex1 > nodes && vertex2 > nodes)
+  {
+    addEdges(vertices,nodes);
+  }*/
+  vertices[vertex1][vertex2]++;
+  vertices[vertex2][vertex1]++;
+}
+void highestDegree(vector<vector<int>> &vertices, int &nodes)
+{
+  int highestDegree = 0;
+  int lowesrDegree = 0;
+  int count = 0;
+  for (int i = 0; i < nodes; i++)
+  {
+    count = 0;
+    for(int j = 0; i < nodes; j++)
+    {
+      if (vertices[i][j] == 1)
+      {
+        count++;
+      }
+      if(i == j && vertices[i][j])
+      {
+        count++;
+      }
+    }
+    if(count > lowesrDegree)
+    {
+      lowesrDegree = count;
+      highestDegree = i;
+    }
+  }
+  
+  
+  cout << "\nVertex with the highes degree: " << highestDegree << endl;
+}
+void findIsolated(vector<vector<int>> &vertices, int &nodes)
+{
+  int count = 0;
+  vector<int> isolatedVertices;
+  for(int i = 0; i < nodes; i++)
+  {
+    for (int j = 0; j < nodes; j++)
+    {
+      if (i != j && vertices[i][j]!=1)
+      {
+        count++;
+      }
+    }
+    if (count == 0)
+    {
+      isolatedVertices.push_back(i);
+    }
+  }
+  cout << "Isolated Vertices: ";
+  for(int i = 0; i <isolatedVertices.size(); i++)
+  {
+    cout << isolatedVertices[i] << ",";
+  }
+}
+void findLoop()
+{
+  cout << "Number of loops: " << endl;
+}
+void isConnected()
+{
+  /*if
+  {
+	cout << "Connected: Yes " << endl;
+  }
+  else if()
+  {
+	cout << "Connected: No " << endl;
+  }*/
+}
+void isCompleted()
+{/*
+  if()
+  {
+	cout << "Completed: Yes " << endl;
+  }
+  
+  else if ()
+  {
+	cout << "Completed: No " << endl;
+  }*/
+}
+void displayInfo(vector<vector<int>> &vertices, int &nodes)
+{
+  highestDegree(vertices, nodes);
+  findIsolated(vertices,nodes);
+  findLoop();
+  isConnected();
+  isCompleted();
+ }
